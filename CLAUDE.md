@@ -2,6 +2,16 @@
 
 Visual feedback tool for AI coding agents - Python port of the original Agentation by Benji Taylor.
 
+**PyPI:** https://pypi.org/project/agentation/
+
+## Installation
+
+```bash
+pip install agentation            # Core package
+pip install agentation[flask]     # With Flask support
+pip install agentation[fastapi]   # With FastAPI support
+```
+
 ## Quick Reference
 
 ```bash
@@ -59,7 +69,7 @@ Precedence: `enabled` config → `AGENTATION_ENABLED` env var → framework debu
 ## Testing
 
 ```bash
-pytest tests/                    # All tests (30 total)
+pytest tests/                    # All tests (32 total)
 pytest tests/test_config.py      # Config tests
 pytest tests/test_flask.py       # Flask adapter tests
 pytest tests/test_fastapi.py     # FastAPI adapter tests
