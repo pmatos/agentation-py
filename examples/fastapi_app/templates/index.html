@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentation FastAPI Example</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: system-ui, sans-serif; line-height: 1.6; padding: 2rem; max-width: 800px; margin: 0 auto; background: #f9fafb; }
+        h1 { margin-bottom: 1rem; color: #1f2937; }
+        p { margin-bottom: 1rem; color: #4b5563; }
+        .card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .btn { display: inline-block; padding: 0.5rem 1rem; background: #10b981; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+        .btn:hover { background: #059669; }
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1rem; }
+        .stat { text-align: center; padding: 1rem; background: white; border-radius: 8px; border: 1px solid #e5e7eb; }
+        .stat-value { font-size: 2rem; font-weight: bold; color: #1f2937; }
+        .stat-label { font-size: 0.875rem; color: #6b7280; }
+    </style>
+</head>
+<body>
+    <h1>FastAPI + Agentation Demo</h1>
+
+    <p>This example shows Agentation integrated with FastAPI. The toolbar should appear in the corner.</p>
+
+    <div class="stats">
+        <div class="stat">
+            <div class="stat-value">42</div>
+            <div class="stat-label">Users Online</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">128</div>
+            <div class="stat-label">Tasks Completed</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">99%</div>
+            <div class="stat-label">Uptime</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Quick Actions</h2>
+        <p>Try annotating these buttons to provide feedback on their design.</p>
+        <button class="btn">Create New</button>
+        <button class="btn" style="background: #3b82f6;">View Reports</button>
+        <button class="btn" style="background: #6b7280;">Settings</button>
+    </div>
+
+    <div class="card">
+        <h2>Recent Activity</h2>
+        <ul>
+            <li>User signed up - 2 minutes ago</li>
+            <li>Task completed - 5 minutes ago</li>
+            <li>Report generated - 10 minutes ago</li>
+        </ul>
+    </div>
+</body>
+</html>
