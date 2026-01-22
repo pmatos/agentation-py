@@ -30,6 +30,8 @@ app = Flask(__name__)
 AgentationFlask(app)  # Auto-enabled when app.debug=True
 ```
 
+See the [Flask Guide](docs/flask-guide.md) for complete documentation.
+
 ### FastAPI
 
 ```python
@@ -40,6 +42,8 @@ app = FastAPI()
 config = AgentationConfig(enabled=True)
 app.add_middleware(AgentationMiddleware, config=config)
 ```
+
+See the [FastAPI Guide](docs/fastapi-guide.md) for complete documentation.
 
 ## Configuration
 
