@@ -18,4 +18,8 @@ def __getattr__(name: str):
         from agentation.adapters.flask import AgentationFlask
 
         return AgentationFlask
+    if name == "AgentationMiddleware":
+        from agentation.adapters.fastapi import AgentationMiddleware
+
+        return AgentationMiddleware
     raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
