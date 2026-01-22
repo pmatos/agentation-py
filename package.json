@@ -1,0 +1,14 @@
+{
+  "name": "agentation-py-js",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JavaScript module for agentation-py",
+  "scripts": {
+    "build": "esbuild src/js/index.js --bundle --minify --format=iife --global-name=Agentation --outfile=src/agentation/static/agentation.min.js",
+    "build:dev": "esbuild src/js/index.js --bundle --format=iife --global-name=Agentation --outfile=src/agentation/static/agentation.min.js --sourcemap",
+    "watch": "esbuild src/js/index.js --bundle --format=iife --global-name=Agentation --outfile=src/agentation/static/agentation.min.js --sourcemap --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0"
+  }
+}
