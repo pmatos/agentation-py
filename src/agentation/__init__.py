@@ -11,3 +11,11 @@ __all__ = [
     "is_enabled",
     "__version__",
 ]
+
+
+def __getattr__(name: str):
+    if name == "AgentationFlask":
+        from agentation.adapters.flask import AgentationFlask
+
+        return AgentationFlask
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
