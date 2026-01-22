@@ -66,3 +66,22 @@ def test_inject_excludes_route_when_disabled():
     result = inject_agentation(html, config, route="/dashboard")
 
     assert '"route"' not in result
+
+
+def test_inject_escapes_closing_script_tags():
+    """Closing script tags in config values are escaped to prevent XSS."""
+    html = "<html><body></body></html>"
+    config = AgentationConfig()
+    result = inject_agentation(html, config, route="</script><script>alert(1)")
+
+    assert "</script><script>" not in result
+    assert "<\\/script>" in result
+
+
+def test_inject_case_insensitive_body_tag():
+    """Body tag detection is case insensitive."""
+    html = "<html><BODY><h1>Hello</h1></BODY></html>"
+    config = AgentationConfig()
+    result = inject_agentation(html, config)
+
+    assert "__AGENTATION_CONFIG__" in result

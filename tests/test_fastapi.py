@@ -1,9 +1,9 @@
 """Tests for FastAPI/Starlette middleware."""
 
-from starlette.testclient import TestClient
 from starlette.applications import Starlette
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.routing import Route
+from starlette.testclient import TestClient
 
 from agentation import AgentationConfig
 from agentation.adapters.fastapi import AgentationMiddleware
